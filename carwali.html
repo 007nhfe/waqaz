@@ -1,0 +1,78 @@
+<html>
+ <head>
+    <style>
+
+        #road{
+            width: 100%;
+        }
+        
+        @keyframes carAnimation{
+        
+            from{
+                left:0;
+            }
+        
+            to{
+                left: 80%;
+            }
+        
+        }
+        
+        #carBody{
+            position: relative  ;
+            width: 300px;
+            /* border: 5px solid red; */
+            height: 100px;
+            position: absolute;
+            top:20%;
+            animation: carAnimation 4s ease-in-out 0s;
+            animation-fill-mode: forwards;
+        }
+        #car{
+            width: 100%;
+        }
+        
+        @keyframes wheelWaliAnimation {
+            
+            from{
+                transform: rotate(0deg);
+            }
+        
+            to{
+                transform: rotate(360deg);
+            }
+        
+        }
+        
+        .wheel:nth-child(2){
+            position: absolute;
+            left: 220px;
+            top: 70px;
+        }
+        
+        .wheel:nth-child(3){
+            position: absolute;
+            left: 49px;
+            top: 70px;
+        }
+        
+        .wheel{
+            width: 40px;
+            animation:wheelWaliAnimation 4s ease-in-out 0s
+        }
+        </style>
+        
+       
+        <body><img id="road" src="myroad.jpg" alt="">
+
+            <div id="carBody">
+                <img id="car" src="my-car.png" alt="">
+                <img class="wheel" src="wheel.png" alt="">
+                <img class="wheel" src="wheel.png" alt="">
+            </div></body>
+        </head>
+
+</html>
+
+
+
